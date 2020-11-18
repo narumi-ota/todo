@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todoリスト</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="todoapp">
+      <input type="text" v-model="newTodo" @keyup.enter="addList">
+      <button @click="addList">リスト追加</button>
+      <table>
+        <tr>
+          <td>Todo合計：{{ listCount }}</td>
+          <td>未着手：{{ listNotouch }}</td>
+          <td>処理中：{{ listProcessing }}</td>
+          <td>完了：{{ listComplete }}</td>
+        </tr>
+      </table>
+      <p>Todoの数：{{ listCount }}</p>
+
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>内容</th>
+          <th>ステータス</th>
+        </tr>
+        <tr v-for="(l,index) in list" :key="l">
+          <td>{{ index }}</td>
+          <td>{{ l.text }}</td>
+          <td>{{ l.status }}</td>
+          <td><button @click="updateStatus(index)">更新</button></td>
+          <td><button @click="deleteTodo(index)">削除</button></td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
