@@ -5,35 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todoリスト</title>
     <link rel="stylesheet" href="main.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
 
     <div id="todoapp">
-      <input type="text" v-model="newTodo" @keyup.enter="addList">
-      <button @click="addList">リスト追加</button>
+      <div class="input-outer">
+        <label for="content">内容</label>
+        <input type="text" name="content" v-model="newTodo" @keyup.enter="addList">
+        <label for="date">期日</label>
+        <input type="date" name="date" v-model="newDeadline">
+        <button @click="addList" class="btn add-btn">リスト追加</button>
+      </div>
       <table>
         <tr>
           <td>Todo合計：{{ listCount }}</td>
-          <td>未着手：{{ listNotouch }}</td>
-          <td>処理中：{{ listProcessing }}</td>
-          <td>完了：{{ listComplete }}</td>
+        </tr>
+        <tr>
+          <td><button @click="filterReset" class="btn all-btn">すべて</button></td>
+          <td><button @click="filterNotouch" class="btn filter-btn">未着手：{{ listNotouch.length }}</button></td>
+          <td><button class="btn filter-btn">処理中：{{ listProcessing.length }}</button></td>
+          <td><button class="btn filter-btn">完了：{{ listComplete.length }}</button></td>
         </tr>
       </table>
-      <p>Todoの数：{{ listCount }}</p>
+
+      <i class="fa fa-android"></i>
+      <i class="fas fa-flask fa-lg"></i>
 
       <table>
         <tr>
           <th>ID</th>
           <th>内容</th>
+          <th>期日</th>
           <th>ステータス</th>
         </tr>
-        <tr v-for="(l,index) in list" :key="l">
+        <tr v-for="(l,index) in list" :key="l" class="table-row">
           <td>{{ index }}</td>
-          <td>{{ l.text }}</td>
-          <td>{{ l.status }}</td>
-          <td><button @click="updateStatus(index)">更新</button></td>
-          <td><button @click="deleteTodo(index)">削除</button></td>
+          <td class="text-field">{{ l.text }}</td>
+          <td><input type="date" name="date" id="" v-bind:value="l.deadline" v-bind:class="{ hurry: isHurry[index] }"></td>
+          <td v-bind:class="{ notouch: isNotouch[index], processing: isProcessing[index], complete: isComplete[index]}">{{ l.status }}</td>
+          <td><button @click="updateStatus(index)" class="btn status-btn">更新</button></td>
+          <td><button @click="deleteTodo(index)" class="btn delete-btn">削除</button></td>
         </tr>
       </table>
     </div>

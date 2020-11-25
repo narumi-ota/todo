@@ -1,0 +1,68 @@
+input {
+    border: 1px solid lightgrey;
+    height: 30px;
+    padding: 10px;
+}
+table {
+    border-collapse: collapse;
+}
+.input-outer {
+    margin: 20px 0;
+}
+.btn {
+    border: none;
+    color: gray;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+.btn:hover {
+    transform: scale(1.2);
+}
+.add-btn {
+    background-color: lightslategrey;
+    color: white;
+}
+.status-btn {
+    background-color: aquamarine;
+}
+.delete-btn {
+    background-color: azure;
+}
+.all-btn {
+    background-color: lightslategrey;
+    color: white;
+}
+.filter-btn{
+    background-color: aquamarine;
+}
+.table-row {
+   background-color: transparent;
+   padding: 10px 0;
+}
+.table-row td {
+    text-align: center;
+}
+.table-row:nth-child(even) {
+    background-color: #e0e0e0;
+}
+.text-field {
+    min-width: 300px;
+}
+
+.hurry {
+    color: magenta;
+}
+
+.notouch {
+    color: blue;
+}
+
+.processing {
+    color: green;
+}
+
+.complete {
+    color: red;
+}
