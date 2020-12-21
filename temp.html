@@ -1,0 +1,269 @@
+@extends('layouts.tk-office2')
+
+@section('side-button')    
+    <x-side-button/>
+@endsection
+
+@section('office')
+
+    <x-tk-office2-slider
+    :images="[
+        ['image' => '/assets/images/officelist/shinosaka/slide01.jpg', 'right' => '完成予想 CG', 'left' => ''],
+        ['image' => '/assets/images/officelist/shinosaka/slide02.jpg', 'right' => '完成予想 CG', 'left' => ''],
+        ['image' => '/assets/images/officelist/shinosaka/slide03.jpg', 'right' => '完成予想 CG', 'left' => ''],
+        ['image' => '/assets/images/officelist/shinosaka/slide04.jpg', 'right' => '完成予想 CG', 'left' => ''],
+        ['image' => '/assets/images/officelist/shinosaka/slide05.jpg', 'right' => '完成予想 CG', 'left' => ''],
+        ['image' => '/assets/images/officelist/shinosaka/slide06.jpg', 'right' => '完成予想 CG', 'left' => ''],
+        ['image' => '/assets/images/officelist/shinosaka/slide07.jpg', 'right' => '完成予想 CG', 'left' => ''],
+    ]"
+    place="H¹O 新大阪"
+    openDate="2021年7月開業予定"
+    sections="37"
+    typeMin="12.36"
+    typeMax="52.02"
+    station="Osaka Metro御堂筋線<br class='u-none--pc'/>「新大阪」駅徒歩5分"
+    circle="募集中!"
+    />
+
+    {{-- @php
+        $abouts=[
+            [ 'img' => '/assets/images/officelist/toranomon/about01.png', 'title'=>'進化を続けるエリアの真ん中に', 'detail'=>'大規模再開発により国際新都心として進化を続ける「虎ノ門」と中央官庁街「霞ヶ関」のセンターポジション。'],
+            [ 'img' => '/assets/images/officelist/toranomon/about02.png', 'title'=>'銀座線「虎ノ門」駅から<br class="u-none--pc">直結1分の好立地', 'detail'=>'虎ノ門駅との一体開発により、駅ホームより直結1分。日比谷線「虎ノ門ヒルズ」駅のほか、再開発エリアへも地下通路で直通している好立地。'],
+            [ 'img' => '/assets/images/officelist/toranomon/about03.png', 'title'=>'開放感あふれる上質空間', 'detail'=>'四方角地の敷地を活かした、全面ガラス＆天井高3,000ｍｍの開放感あふれる空間設計。'],
+            [ 'img' => '/assets/images/officelist/toranomon/about05.png', 'title'=>'先進スペックを搭載', 'detail'=>'生体認証セキュリティのほか、フラッパーゲートを設置など先進のスペックをご用意。'],
+        ];
+    @endphp
+    <x-tk-office2-about
+    image="/assets/images/officelist/toranomon/about-toranomon.jpg"
+    info="H¹O 虎ノ門外観"
+    cg="完成予想 CG"
+    :abouts="$abouts"
+    /> --}}
+    
+    <x-tk-office2-map mapTitle="西の玄関口新大阪から徒歩5分の好立地。" 
+    mapInfo="大阪の玄関口「新大阪」は、東京方面や九州方面を結ぶ東海道新幹線、山陽新幹線の通るビッグターミナル。 周辺にはホテルや会議室などビジネスには欠かせない施設が揃っています。" 
+    mapImg="/assets/images/officelist/shinosaka/map.jpg"
+    :lines="[
+        'Osaka Metro御堂筋線' => [
+            [ 'station' => '新大阪駅', 'exit' => '4番出入口', 'minutes' => '5', ],
+        ],
+        'JR線' => [
+            [ 'station' => '新大阪駅', 'exit' => '北口', 'minutes' => '7', ],
+        ],
+    ]"
+    address="大阪府大阪市淀川区<br>宮原四丁目2-9,2-10(地番)"
+    link="https://maps.google.co.jp/maps/search/大阪府大阪市淀川区宮原４丁目２"
+    gtm="map_shinosaka"
+    />
+
+    <x-tk-office2-access
+    mapImg="/assets/images/officelist/shinosaka/route-map.jpg"
+    :details="[
+        'JR京都線利用' => [
+            [ 'station' => '大阪駅まで', 'how' => '直通', 'minutes' => '4', ],
+        ],
+        'Osaka Metro御堂筋線利用' => [
+            [ 'station' => '梅田町駅まで', 'how' => '直通', 'minutes' => '6', ],
+            [ 'station' => '淀屋橋駅まで', 'how' => '直通', 'minutes' => '9', ],
+            [ 'station' => '心斎橋駅まで', 'how' => '直通', 'minutes' => '13', ],
+            [ 'station' => 'なんば駅まで', 'how' => '直通', 'minutes' => '15', ],
+        ],
+        'JR京都線快速利用、JR大阪環状線外回り乗換' => [
+            [ 'station' => '京橋駅まで', 'how' => '', 'minutes' => '10', ],
+        ],
+    ]"
+    />
+
+    <x-tk-office2-plan
+    :images="[
+        '/assets/images/officelist/shinosaka/floor-2f.jpg',
+        '/assets/images/officelist/shinosaka/floor-3f.jpg',
+        '/assets/images/officelist/shinosaka/floor-4f.jpg',
+    ]"
+    :floors="[
+        ['floor'=>'2F', 'active'=>'', 'count'=>'3'],
+        ['floor'=>'3F(ラウンジ階)', 'active'=>'--active', 'count'=>'3'],
+        ['floor'=>'4F(ラウンジ階)', 'active'=>'', 'count'=>'3'],
+    ]"
+    />
+
+    <x-tk-office2-services
+    :services="[
+        [ 'img' => '/assets/images/officelist/service-01.png', 'alt'=>'有人受付サービス'],
+        [ 'img' => '/assets/images/officelist/service-10.png', 'alt'=>'ルームクリーニング'],
+        [ 'img' => '/assets/images/officelist/service-11.png', 'alt'=>'水道光熱費込'],
+        [ 'img' => '/assets/images/officelist/service-14.png', 'alt'=>'全室個別空調'],
+        [ 'img' => '/assets/images/officelist/service-15.png', 'alt'=>'生体認証によるキーレスセキュリティ'],
+        [ 'img' => '/assets/images/officelist/service-04.png', 'alt'=>'共用部wifi'],
+        [ 'img' => '/assets/images/officelist/service-05.png', 'alt'=>'ドリンクサービス'],
+        [ 'img' => '/assets/images/officelist/service-17.png', 'alt'=>'ヘルシーフード提供'],
+    ]"
+    />
+
+    <x-tk-office2-conditions/>
+
+@php
+
+$locations = [
+    [
+        'id' => 'public-facility--bank',
+        'name' => '公共施設・銀行',
+        'details' => [      
+            [ 'name' => '虎ノ門郵便局', 'distance' => '約10m', 'time' => '徒歩1分', 'lat' => 35.670528, 'lng' => 139.749370, ],
+            [ 'name' => '三菱UFJ銀行虎ノ門支店', 'distance' => '約10m', 'time' => '徒歩1分', 'lat' => 35.669779, 'lng' => 139.750428, ],
+            [ 'name' => 'みずほ銀行虎ノ門支店', 'distance' => '約30m', 'time' => '徒歩1分', 'lat' => 35.670177, 'lng' => 139.748966, ],
+            [ 'name' => '虎の門交番', 'distance' => '約230m', 'time' => '徒歩3分', 'lat' => 35.670006, 'lng' => 139.747356, ],
+            [ 'name' => '特許庁', 'distance' => '約390m', 'time' => '徒歩5分', 'lat' => 35.671025, 'lng' => 139.745846, ],
+            [ 'name' => '弁護士会館', 'distance' => '約660m', 'time' => '徒歩9分', 'lat' => 35.674318, 'lng' => 139.753629, ],
+            [ 'name' => '国会議事堂', 'distance' => '約890m', 'time' => '徒歩12分', 'lat' => 35.675979, 'lng' => 139.744854, ],
+            [ 'name' => '愛宕警察署', 'distance' => '約1250m', 'time' => '徒歩16分', 'lat' => 35.661112, 'lng' => 139.752673, ],
+            [ 'name' => '国会図書館東京本館', 'distance' => '約1280m', 'time' => '徒歩16分', 'lat' => 35.678614, 'lng' => 139.744199, ],
+            [ 'name' => '港区役所', 'distance' => '約1550m', 'time' => '徒歩20分', 'lat' => 35.658218, 'lng' => 139.751540, ],
+
+            // [ 'name' => '芝消防署', 'distance' => '約1560m', 'time' => '徒歩20分', 'lat' => 35.660354, 'lng' => 139.756411, ],
+            // [ 'name' => '芝税務署', 'distance' => '約2660m', 'time' => '徒歩34分', 'lat' => 35.649740, 'lng' => 139.747046, ],
+        ],
+    ],
+    [
+        'id' => 'parking',
+        'name' => '駐車場',
+        'details' => [
+            [ 'name' => 'タイムズ東京虎ノ門グローバルスクエア', 'distance' => '建物内', 'time' => '徒歩1分', 'lat' => 35.670145, 'lng' => 139.750075, ],
+            [ 'name' => '三井のリパーク虎ノ門1丁目第5', 'distance' => '約140m', 'time' => '徒歩2分', 'lat' => 35.668703, 'lng' => 139.748701, ],
+            [ 'name' => '三井のリパーク虎ノ門1丁目第3', 'distance' => '約140m', 'time' => '徒歩2分', 'lat' => 35.668671, 'lng' => 139.750278, ],
+            [ 'name' => '日土地ビル駐車場', 'distance' => '約170m', 'time' => '徒歩3分', 'lat' => 35.670817, 'lng' => 139.750590, ],
+            [ 'name' => 'NPD日立ハイテクビルディング', 'distance' => '約190m', 'time' => '徒歩3分', 'lat' => 35.668394, 'lng' => 139.751372, ],
+            [ 'name' => '虎ノ門ピアザビル駐車場', 'distance' => '約200m', 'time' => '徒歩3分', 'lat' => 35.668836, 'lng' => 139.747680, ],
+            [ 'name' => 'エコロパーク新橋第3', 'distance' => '約220m', 'time' => '徒歩3分', 'lat' => 35.668834, 'lng' => 139.752021, ],
+            [ 'name' => '西新橋1丁目パーキング', 'distance' => '約230m', 'time' => '徒歩3分', 'lat' => 35.668926, 'lng' => 139.752123, ],
+            [ 'name' => 'NPC24H虎ノ門第2パーキング', 'distance' => '約260m', 'time' => '徒歩4分', 'lat' => 35.668838, 'lng' => 139.752546, ],
+            // [ 'name' => 'タイムズ駐車場西新橋第13', 'distance' => '約280m', 'time' => '徒歩4分', 'lat' => 35.668859, 'lng' => 139.752831, ],
+            [ 'name' => '三井のリパーク霞が関ビル駐車場', 'distance' => '約300m', 'time' => '徒歩4分', 'lat' => 35.671634, 'lng' => 139.747054, ],
+        ],
+    ],
+    [
+        'id' => 'meeting-room',
+        'name' => '貸し会議室',
+        'details' => [
+            [ 'name' => '東京虎ノ門グローバルスクエアコンファレンス', 'distance' => '建物内', 'time' => '徒歩1分', 'lat' => 35.670145, 'lng' => 139.750075, ],
+            [ 'name' => 'TKP虎ノ門駅前カンファレンスセンター', 'distance' => '約50m', 'time' => '徒歩1分', 'lat' => 35.669710, 'lng' => 139.750723, ],
+            [ 'name' => '虎ノ門アルシュ', 'distance' => '約100m', 'time' => '徒歩2分', 'lat' => 35.670379, 'lng' => 139.750507, ],
+            [ 'name' => 'スタンダード会議室&nbsp;虎ノ門駅前店', 'distance' => '約100m', 'time' => '徒歩2分', 'lat' => 35.669186, 'lng' => 139.751006, ],
+            [ 'name' => 'ハロー貸会議室&nbsp;虎ノ門', 'distance' => '約170m', 'time' => '徒歩3分', 'lat' => 35.669040, 'lng' => 139.748286, ],
+            [ 'name' => 'AP虎ノ門', 'distance' => '約220m', 'time' => '徒歩3分', 'lat' => 35.669713, 'lng' => 139.752530, ],
+            [ 'name' => '虎ノ門ホール', 'distance' => '約290m', 'time' => '徒歩4分', 'lat' => 35.668686, 'lng' => 139.752461, ],
+            [ 'name' => 'レンタルキッチンスペース', 'distance' => '約330m', 'time' => '徒歩5分', 'lat' => 35.668491, 'lng' => 139.753023, ],
+            [ 'name' => 'ニッショーホール', 'distance' => '約460m', 'time' => '徒歩6分', 'lat' => 35.668024, 'lng' => 139.746176, ],
+            [ 'name' => '貸会議室&nbsp;新橋ビジネスフォーラム', 'distance' => '約520m', 'time' => '徒歩7分', 'lat' => 35.668713, 'lng' => 139.755282, ],
+            // [ 'name' => '航空会館', 'distance' => '約520m', 'time' => '徒歩7分', 'lat' => 35.668873, 'lng' => 139.755470, ],
+            ],
+        ],
+    [
+        'id' => 'hospital',
+        'name' => '医療施設',
+        'details' => [
+            [ 'name' => '東京虎ノ門グローバルスクエア歯科', 'distance' => '建物内', 'time' => '徒歩1分', 'lat' => 35.670094, 'lng' => 139.749488, ],
+            [ 'name' => '虎の門診療所', 'distance' => '約50m', 'time' => '徒歩1分', 'lat' => 35.670467, 'lng' => 139.749868, ],
+            [ 'name' => '川島医院', 'distance' => '約50m', 'time' => '徒歩1分', 'lat' => 35.669319, 'lng' => 139.750233, ],
+            [ 'name' => '虎ノ門ウィメンズクリニック', 'distance' => '約60m', 'time' => '徒歩1分', 'lat' => 35.669713, 'lng' => 139.750840, ],
+            [ 'name' => '霞が関アーバンクリニック', 'distance' => '約80m', 'time' => '徒歩1分', 'lat' => 35.670911, 'lng' => 139.750376, ],
+            [ 'name' => '虎ノ門・日比谷クリニック', 'distance' => '約100m', 'time' => '徒歩2分', 'lat' => 35.670308, 'lng' => 139.750761, ],
+            [ 'name' => '霞ヶ関診療所', 'distance' => '約150m', 'time' => '徒歩2分', 'lat' => 35.670066, 'lng' => 139.750930, ],
+            [ 'name' => '虎ノ門とうまクリニック', 'distance' => '約160m', 'time' => '徒歩2分', 'lat' => 35.670105, 'lng' => 139.751206, ],
+            [ 'name' => '虎の門山下メンタルクリニック', 'distance' => '約160m', 'time' => '徒歩2分', 'lat' => 35.668262, 'lng' => 139.749281, ],
+            [ 'name' => 'メディカルケア虎ノ門', 'distance' => '約160m', 'time' => '徒歩2分', 'lat' => 35.668429, 'lng' => 139.748612, ],
+        ],
+    ],
+    [
+        'id' => 'shopping-complex',
+        'name' => '商業施設',
+        'details' => [
+            // [ 'name' => '虎ノ門ヒルズ', 'distance' => '約260m', 'time' => '徒歩4分', 'lat' => 35.667084, 'lng' => 139.749235, ],
+            // [ 'name' => '肉のハナマサ西新橋店', 'distance' => '約700m', 'time' => '徒歩9分', 'lat' => 35.665616, 'lng' => 139.753261, ],
+            // [ 'name' => 'マルエツプチ新橋五丁目店', 'distance' => '約890m', 'time' => '徒歩12分', 'lat' => 35.664389, 'lng' => 139.753150, ],
+            // [ 'name' => 'マルエツプチ城山ヒルズ店', 'distance' => '約910m', 'time' => '徒歩12分', 'lat' => 35.665082, 'lng' => 139.744082, ],
+            // [ 'name' => '成城石井赤坂アークヒルズ店', 'distance' => '約1040m', 'time' => '徒歩13分', 'lat' => 35.667458, 'lng' => 139.740064, ],
+            // [ 'name' => '肉のハナマサ赤坂店', 'distance' => '約1060m', 'time' => '徒歩14分', 'lat' => 35.671744, 'lng' => 139.739544, ],
+            // [ 'name' => '汐留シオサイト カレッタ汐留', 'distance' => '約1060m', 'time' => '徒歩14分', 'lat' => 35.664491, 'lng' => 139.762525, ],
+            // [ 'name' => '東京ミッドタウン日比谷', 'distance' => '約1120m', 'time' => '徒歩14分', 'lat' => 35.673525, 'lng' => 139.759104, ],
+            // [ 'name' => '赤坂サカス', 'distance' => '約1270m', 'time' => '徒歩16分', 'lat' => 35.672834, 'lng' => 139.735129, ],
+            // [ 'name' => 'GINZA SIX', 'distance' => '約1450m', 'time' => '徒歩19分', 'lat' => 35.669611, 'lng' => 139.764059, ],
+        ],
+    ],
+    [
+        'id' => 'food',
+        'name' => '飲食店',
+        'details' => [
+            [ 'name' => 'タリーズコーヒー虎ノ門グローバルスクエア店', 'distance' => '建物内', 'time' => '徒歩1分', 'lat' => 35.670012, 'lng' => 139.749816, ],
+            [ 'name' => '季節料理 ととや', 'distance' => '約40m', 'time' => '徒歩1分', 'lat' => 35.669305, 'lng' => 139.749645, ],
+            [ 'name' => '鳥元 虎ノ門店', 'distance' => '約40m', 'time' => '徒歩1分', 'lat' => 35.669504, 'lng' => 139.750472, ],
+            [ 'name' => 'おりんち', 'distance' => '約50m', 'time' => '徒歩1分', 'lat' => 35.669414, 'lng' => 139.750567, ],
+            [ 'name' => 'さくらさく', 'distance' => '約80m', 'time' => '徒歩1分', 'lat' => 35.669005, 'lng' => 139.749829, ],
+            [ 'name' => '虎ノ門ビストロ BBQ アジアナ', 'distance' => '約80m', 'time' => '徒歩1分', 'lat' => 35.668717, 'lng' => 139.749378, ],
+            [ 'name' => 'もつ千 虎ノ門店', 'distance' => '約110m', 'time' => '徒歩2分', 'lat' => 35.668896, 'lng' => 139.748703, ],
+            [ 'name' => 'おきあがり 小法師', 'distance' => '約150m', 'time' => '徒歩2分', 'lat' => 35.668357, 'lng' => 139.749285, ],
+            [ 'name' => 'Carne Bar Katete 虎ノ門<br>(カルネ バル カテテ)', 'distance' => '約160m', 'time' => '徒歩2分', 'lat' => 35.668591, 'lng' => 139.748843, ],
+            [ 'name' => '虎ノ門ヒルズ', 'distance' => '約260m', 'time' => '徒歩4分', 'lat' => 35.667084, 'lng' => 139.749235, ],
+
+            // [ 'name' => '肉系居酒屋 肉十八番屋 虎ノ門店', 'distance' => '約160m', 'time' => '徒歩2分', 'lat' => 35.668409, 'lng' => 139.749041, ],
+
+        ],
+    ],
+    [
+        'id' => 'hotel',
+        'name' => '宿泊施設',
+        'details' => [
+            [ 'name' => 'Andaz Tokyo Toranomon Hills<br> - a concept by Hyatt', 'distance' => '約260m', 'time' => '徒歩4分', 'lat' => 35.666966, 'lng' => 139.749213, ],
+            [ 'name' => 'ビーエヌビープラス虎の門', 'distance' => '約290m', 'time' => '徒歩4分', 'lat' => 35.667991, 'lng' => 139.751350, ],
+            [ 'name' => 'It1', 'distance' => '約350m', 'time' => '徒歩5分', 'lat' => 35.668442, 'lng' => 139.753120, ],
+            [ 'name' => 'EAST TORANOMON Room<br> - KANDO', 'distance' => '約400m', 'time' => '徒歩5分', 'lat' => 35.667798, 'lng' => 139.752826, ],
+            [ 'name' => 'ザ・ビー 新橋', 'distance' => '約460m', 'time' => '徒歩6分', 'lat' => 35.667502, 'lng' => 139.753536, ],
+            [ 'name' => 'アパホテル新橋 虎ノ門', 'distance' => '約520m', 'time' => '徒歩7分', 'lat' => 35.666878, 'lng' => 139.753224, ],
+            [ 'name' => '新橋アーバンホテル', 'distance' => '約520m', 'time' => '徒歩7分', 'lat' => 35.667234, 'lng' => 139.755264, ],
+            [ 'name' => 'The Okura Tokyo', 'distance' => '約610m', 'time' => '徒歩8分', 'lat' => 35.667145, 'lng' => 139.743854, ],
+            [ 'name' => 'ホテルユニゾ新橋', 'distance' => '約680m', 'time' => '徒歩9分', 'lat' => 35.666476, 'lng' => 139.755013, ],
+            [ 'name' => 'ANAインターコンチネンタル<br>ホテル東京', 'distance' => '約870m', 'time' => '徒歩11分', 'lat' => 35.668294, 'lng' => 139.740827, ],
+        ],
+    ],
+];
+    
+@endphp
+
+    {{-- <x-tk-office2-location
+    :map-center="[ 'lat' => 35.670145, 'lng' => 139.750075 ]"
+    :locations="$locations"
+    /> --}}
+
+@php
+    $outlines=[
+        [ 'th' => '所在地', 'td' => '大阪府大阪市淀川区宮原四丁目2-9,2-10(地番)<a class="office-outline__map" href="https://maps.google.co.jp/maps/search/大阪府大阪市淀川区宮原４丁目２ " target="_blank" data-gtm="map_kobunacho">Google Map</a>'],
+        [ 'th' => '交通', 'td' => 'Osaka Metro御堂筋線「新大阪」駅4番出口 徒歩5分<br class="u-none--pc"/>JR線「新大阪」駅北口 徒歩7分'],
+        [ 'th' => '貸主', 'td' => '野村不動産株式会社'],
+        [ 'th' => '内装設計・施工', 'td' => '株式会社竹中工務店'],
+        [ 'th' => '施工', 'td' => '株式会社ドラフト（2階3階,4階,共用部）'],
+        [ 'th' => '竣工', 'td' => '2021年6月末(予定)'],
+        [ 'th' => '用途', 'td' => '事務所'],
+        [ 'th' => '構造／規模／H¹Oフロア', 'td' => 'CFT造／地上12階／2階～4階'],
+        [ 'th' => '区画数', 'td' => '全37区画'],
+        [ 'th' => '貸室タイプ', 'td' => '12.36㎡～52.02㎡（3.73坪～15.73坪）'],
+        [ 'th' => '床配線方式', 'td' => 'OAフロア方式（H=100mm）'],
+        [ 'th' => '電気容量', 'td' => '60 VA/ ㎡ （75 VA/ ㎡ まで増強 可 ）'],
+        [ 'th' => '空調方式', 'td' => '空冷ヒートポンプ方式（個別空調）'],
+        [ 'th' => '照&nbsp;&nbsp;明', 'td' => 'LED照明<br class="u-none--pc">（エントランス及びオフィスフロア）'],
+        [ 'th' => 'エレベーター', 'td' => '乗用2台（13人乗り）、<br class="u-none--pc">非常用1台（17人乗り）'],
+        [ 'th' => '光ケーブル', 'td' => 'MDFまで引込み済'],
+        [ 'th' => 'セキュリティ', 'td' => '機械警備（24時間入退館可）、<br class="u-none--pc">1階及び貸室入口に生体認証装置設置'],
+        [ 'th' => '受電方式', 'td' => '高圧受電方式'],
+        [ 'th' => '共聴設備', 'td' => '地上波デジタル放送・BS・CS(110°)視聴可'],
+        [ 'th' => '営業時間', 'td' => '24時間入退出可能 休業日：無<br class="u-none--pc">&nbsp;※法定点検日除く'],
+        [ 'th' => '開発スタイル', 'td' => 'フロア開設型'],
+    ];
+@endphp
+
+    <x-tk-office2-outline
+    :outlines="$outlines"
+    />
+
+    <x-tk-office-slider />
+
+@endsection
