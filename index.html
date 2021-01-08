@@ -52,5 +52,21 @@
     </div>
 
     <script src="index.js"></script>
+    <script>
+      const arr = ['JS','PHP','RUBY'];
+      var b = '練習';
+
+      function put(a){
+        var b = '本番';
+        for (let i = 0 ; i < a.length ; i++)
+        console.log(`${a[i]}の${b}`)
+      }
+
+
+      put(arr);
+
+      //functionの外では変数が変更されないことの証明
+      console.log(b);
+    </script>
 </body>
 </html>
